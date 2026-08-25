@@ -5,59 +5,77 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>For Prihans ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 </head>
+
 
 <body>
 
 
-    <!-- ==============================
-         OPENING SCREEN
-    =============================== -->
+    <!-- =========================
+         HOME
+    ========================== -->
 
-    <section class="opening-screen" id="openingScreen">
+    <section
+        class="home"
+        id="home">
 
-        <div class="opening-content">
+        <div class="home-content">
 
-            <p class="little-text">
-                ✨ A little surprise for you ✨
+
+            <p class="top-text">
+                ✨ A Little Surprise For You ✨
             </p>
+
 
             <h1>
                 Hey Prihans ❤️
             </h1>
 
-            <p class="opening-subtitle">
+
+            <p class="subtitle">
                 તારા માટે કંઈક ખાસ છે...
             </p>
 
 
-            <!-- MUSIC BUTTON -->
+            <!-- =====================
+                 MUSIC BUTTON
+            ====================== -->
 
             <button
-                id="musicButton"
-                onclick="startMusic()">
+                class="music-btn"
+                onclick="playSong()">
 
                 🎵 Play Our Song ❤️
 
             </button>
 
 
-            <!-- LETTER BUTTON -->
+            <br>
+            <br>
+
+
+            <!-- =====================
+                 LETTER BUTTON
+            ====================== -->
 
             <button
-                id="letterButton"
-                onclick="openLetter()"
-                style="display: none;">
+                class="letter-btn"
+                onclick="openLetter()">
 
                 💌 Open My Letter
 
             </button>
+
 
         </div>
 
@@ -65,27 +83,14 @@
 
 
 
-    <!-- ==============================
-         BIRTHDAY SONG
-    =============================== -->
-
-    <audio id="birthdaySong" loop>
-
-        <source
-            src="BIRTHDAY.MP3"
-            type="audio/mpeg">
-
-    </audio>
-
-
-
-    <!-- ==============================
-         LETTER
-    =============================== -->
+    <!-- =========================
+         LETTER SECTION
+    ========================== -->
 
     <section
-        class="letter-screen"
-        id="letterScreen">
+        class="letter-section"
+        id="letterSection">
+
 
         <div class="letter">
 
@@ -108,18 +113,19 @@
 
             <p>
                 આજે તારો જન્મદિવસ છે,
-                પણ સાચું કહું તો મારા માટે પણ
-                આજનો દિવસ ખૂબ જ ખાસ છે,
+                પણ મારા માટે પણ આજનો દિવસ
+                ખૂબ જ ખાસ છે...
                 કારણ કે આજના દિવસે
-                મારી જિંદગીનો એક ખૂબ જ ખાસ
-                વ્યક્તિ આ દુનિયામાં આવ્યો હતો. 🥹❤️
+                મારી જિંદગીનો એક ખૂબ જ
+                special વ્યક્તિ આ દુનિયામાં
+                આવ્યો હતો. 🥹❤️
             </p>
 
 
             <p>
                 તું મારા માટે કેટલો ખાસ છે
-                એ કદાચ હું શબ્દોમાં ક્યારેય
-                પૂરેપૂરો કહી નહીં શકું.
+                એ કદાચ હું શબ્દોમાં
+                ક્યારેય પૂરેપૂરો કહી નહીં શકું.
             </p>
 
 
@@ -129,7 +135,7 @@
                 તારી સાથે મસ્તી કરવી
                 અને તારી સાથે વિતાવેલી
                 દરેક નાની નાની ક્ષણ
-                મારા માટે ખૂબ જ કિંમતી છે. ❤️
+                મારા માટે ખૂબ કિંમતી છે. ❤️
             </p>
 
 
@@ -137,30 +143,29 @@
                 તું હંમેશા ખુશ રહે,
                 તારા બધા સપના પૂરા થાય
                 અને તારા ચહેરા પરની
-                આ સુંદર smile
-                હંમેશા આવી જ રહે. 🥹✨
+                smile હંમેશા આવી જ રહે. 🥹✨
             </p>
 
 
             <p>
-                Thank you...
-                મારી જિંદગીનો આટલો
-                સુંદર ભાગ બનવા માટે. ❤️
+                Thank you મારી જિંદગીનો
+                આટલો સુંદર ભાગ બનવા માટે. ❤️
             </p>
 
 
-            <p class="birthday-text">
+            <p class="birthday">
                 Happy Birthday, My Love ❤️🎂
             </p>
 
 
-            <h3>
+            <p class="signature">
                 હંમેશા તારી,<br>
                 Ridhdhi ❤️
-            </h3>
+            </p>
 
 
-            <button onclick="showCards()">
+            <button
+                onclick="showCards()">
 
                 There's Something More... ❤️
 
@@ -173,19 +178,20 @@
 
 
 
-    <!-- ==============================
-         CARDS
-    =============================== -->
+    <!-- =========================
+         CARDS SECTION
+    ========================== -->
 
     <section
         class="cards-section"
         id="cardsSection">
 
+
         <div class="cards-content">
 
 
-            <p class="cards-small">
-                ❤️ Just for you
+            <p class="card-top">
+                ❤️ Just For You
             </p>
 
 
@@ -194,26 +200,27 @@
             </h2>
 
 
-            <p class="cards-subtitle">
+            <p class="card-subtitle">
                 દરેક card પર click કરજે... 🥹
             </p>
 
 
-            <div class="cards-container">
+
+            <div class="cards">
 
 
                 <!-- CARD 1 -->
 
                 <div
-                    class="flip-card"
+                    class="card"
                     onclick="flipCard(this)">
 
-                    <div class="flip-card-inner">
+                    <div class="card-inner">
 
 
-                        <div class="flip-card-front">
+                        <div class="card-front">
 
-                            <div class="card-emoji">
+                            <div class="emoji">
                                 😊
                             </div>
 
@@ -221,22 +228,23 @@
                                 તારી Smile
                             </h3>
 
-                            <p>
+                            <small>
                                 Click Me ❤️
-                            </p>
+                            </small>
 
                         </div>
 
 
-                        <div class="flip-card-back">
+                        <div class="card-back">
 
                             <p>
                                 તું હસે ત્યારે
-                                સાચે જ મારો આખો દિવસ
+                                મારો આખો દિવસ
                                 વધારે સુંદર બની જાય છે. ❤️
                             </p>
 
                         </div>
+
 
                     </div>
 
@@ -247,15 +255,15 @@
                 <!-- CARD 2 -->
 
                 <div
-                    class="flip-card"
+                    class="card"
                     onclick="flipCard(this)">
 
-                    <div class="flip-card-inner">
+                    <div class="card-inner">
 
 
-                        <div class="flip-card-front">
+                        <div class="card-front">
 
-                            <div class="card-emoji">
+                            <div class="emoji">
                                 🥹
                             </div>
 
@@ -263,14 +271,14 @@
                                 તારી Care
                             </h3>
 
-                            <p>
+                            <small>
                                 Click Me ❤️
-                            </p>
+                            </small>
 
                         </div>
 
 
-                        <div class="flip-card-back">
+                        <div class="card-back">
 
                             <p>
                                 તારી નાની નાની care
@@ -279,6 +287,7 @@
                             </p>
 
                         </div>
+
 
                     </div>
 
@@ -289,15 +298,15 @@
                 <!-- CARD 3 -->
 
                 <div
-                    class="flip-card"
+                    class="card"
                     onclick="flipCard(this)">
 
-                    <div class="flip-card-inner">
+                    <div class="card-inner">
 
 
-                        <div class="flip-card-front">
+                        <div class="card-front">
 
-                            <div class="card-emoji">
+                            <div class="emoji">
                                 😂
                             </div>
 
@@ -305,14 +314,14 @@
                                 તારી Masti
                             </h3>
 
-                            <p>
+                            <small>
                                 Click Me ❤️
-                            </p>
+                            </small>
 
                         </div>
 
 
-                        <div class="flip-card-back">
+                        <div class="card-back">
 
                             <p>
                                 તારી સાથે હસવું,
@@ -323,6 +332,7 @@
 
                         </div>
 
+
                     </div>
 
                 </div>
@@ -332,81 +342,39 @@
                 <!-- CARD 4 -->
 
                 <div
-                    class="flip-card"
+                    class="card"
                     onclick="flipCard(this)">
 
-                    <div class="flip-card-inner">
+                    <div class="card-inner">
 
 
-                        <div class="flip-card-front">
+                        <div class="card-front">
 
-                            <div class="card-emoji">
+                            <div class="emoji">
                                 🤍
-                            </div>
-
-                            <h3>
-                                તું મને સમજે છે
-                            </h3>
-
-                            <p>
-                                Click Me ❤️
-                            </p>
-
-                        </div>
-
-
-                        <div class="flip-card-back">
-
-                            <p>
-                                હું કંઈ કહું એ પહેલાં જ
-                                તું મને સમજી જાય છે.
-                                અને એ feeling
-                                બહુ special છે. 🥹🤍
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 5 -->
-
-                <div
-                    class="flip-card"
-                    onclick="flipCard(this)">
-
-                    <div class="flip-card-inner">
-
-
-                        <div class="flip-card-front">
-
-                            <div class="card-emoji">
-                                ❤️
                             </div>
 
                             <h3>
                                 Simply You
                             </h3>
 
-                            <p>
+                            <small>
                                 Click Me ❤️
-                            </p>
+                            </small>
 
                         </div>
 
 
-                        <div class="flip-card-back">
+                        <div class="card-back">
 
                             <p>
                                 તારી કોઈ એક વસ્તુ નહીં...
                                 મને તો બસ
-                                “તું” જ ગમે છે. ❤️
+                                "તું" જ ગમે છે. ❤️
                             </p>
 
                         </div>
+
 
                     </div>
 
@@ -416,8 +384,11 @@
             </div>
 
 
+
+            <!-- FINAL BUTTON -->
+
             <button
-                class="final-button"
+                class="final-btn"
                 onclick="showFinal()">
 
                 One Last Thing... ❤️
@@ -431,13 +402,14 @@
 
 
 
-    <!-- ==============================
-         FINAL SCREEN
-    =============================== -->
+    <!-- =========================
+         FINAL SECTION
+    ========================== -->
 
     <section
         class="final-section"
         id="finalSection">
+
 
         <div class="final-content">
 
@@ -447,7 +419,7 @@
             </div>
 
 
-            <p class="final-small">
+            <p>
                 And finally...
             </p>
 
@@ -458,17 +430,10 @@
 
 
             <p>
-                મારી પાસે તને આપવા માટે કદાચ
-                દુનિયાની સૌથી expensive gift નથી...
-                પણ મારા દિલમાં તારા માટે જે પ્રેમ છે,
-                એ મારા માટે સૌથી કિંમતી છે. ❤️
-            </p>
-
-
-            <p>
-                તું મારી જિંદગીનો માત્ર એક વ્યક્તિ નથી,
-                તું મારી ઘણી બધી ખુશીઓનું કારણ છે.
-                🥹❤️
+                તું મારી જિંદગીનો માત્ર એક
+                વ્યક્તિ નથી...
+                તું મારી ઘણી બધી ખુશીઓનું
+                કારણ છે. 🥹❤️
             </p>
 
 
@@ -479,7 +444,7 @@
 
 
             <p>
-                બસ હંમેશા આવો જ રહેજે...
+                બસ હંમેશા આવો જ રહેજે
                 અને મારી સાથે હસતો રહેજે. ❤️
             </p>
 
@@ -496,7 +461,12 @@
 
 
 
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script src="script.js"></script>
+
 
 </body>
 
