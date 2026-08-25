@@ -1,55 +1,181 @@
+/* =========================
+   SONG
+========================= */
+
 let song = null;
 
-function playSong() {
-    song = new Audio("BIRTHDAY.mp3");
 
-    song.loop = true;
-    song.volume = 0.6;
-
-    song.play()
-        .then(() => {
-            document.getElementById("songButton").innerHTML =
-                "❤️ Song Playing...";
-        })
-        .catch((error) => {
-            console.log(error);
-            alert("Song play નથી થયું 😭");
-        });
-}
+const songButton =
+    document.getElementById("songButton");
 
 
-function openLetter() {
+songButton.addEventListener(
+    "click",
+    function () {
 
-    document.getElementById("home").style.display = "none";
+        if (!song) {
 
-    document.getElementById("letterSection").style.display = "flex";
+            song =
+                new Audio(
+                    "BIRTHDAY.mp3"
+                );
 
-    window.scrollTo(0, 0);
-}
+            song.loop = true;
 
-
-function showCards() {
-
-    document.getElementById("letterSection").style.display = "none";
-
-    document.getElementById("cardsSection").style.display = "block";
-
-    window.scrollTo(0, 0);
-}
+            song.volume = 0.6;
+        }
 
 
-function flipCard(card) {
+        song.play()
+            .then(function () {
 
-    card.classList.toggle("flipped");
+                songButton.innerHTML =
+                    "❤️ Our Song Is Playing...";
 
-}
+            })
+            .catch(function (error) {
+
+                console.log(
+                    "Audio error:",
+                    error
+                );
+
+                alert(
+                    "Song play કરવા માટે ફરી button tap કરજે ❤️"
+                );
+
+            });
+
+    }
+);
 
 
-function showFinal() {
 
-    document.getElementById("cardsSection").style.display = "none";
+/* =========================
+   OPEN LETTER
+========================= */
 
-    document.getElementById("finalSection").style.display = "flex";
+const openLetterButton =
+    document.getElementById(
+        "openLetterButton"
+    );
 
-    window.scrollTo(0, 0);
-}
+
+openLetterButton.addEventListener(
+    "click",
+    function () {
+
+        document.getElementById(
+            "home"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "letterSection"
+        ).style.display = "flex";
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);
+
+
+
+/* =========================
+   LETTER → CARDS
+========================= */
+
+const cardsButton =
+    document.getElementById(
+        "cardsButton"
+    );
+
+
+cardsButton.addEventListener(
+    "click",
+    function () {
+
+        document.getElementById(
+            "letterSection"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "cardsSection"
+        ).style.display = "block";
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);
+
+
+
+/* =========================
+   CARDS
+========================= */
+
+const cards =
+    document.querySelectorAll(
+        ".card"
+    );
+
+
+cards.forEach(
+    function (card) {
+
+        card.addEventListener(
+            "click",
+            function () {
+
+                card.classList.toggle(
+                    "flipped"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================
+   FINAL
+========================= */
+
+const finalButton =
+    document.getElementById(
+        "finalButton"
+    );
+
+
+finalButton.addEventListener(
+    "click",
+    function () {
+
+        document.getElementById(
+            "cardsSection"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "finalSection"
+        ).style.display = "flex";
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);
