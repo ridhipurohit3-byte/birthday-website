@@ -22,32 +22,28 @@ function playSong() {
         .then(function () {
 
             const button =
-                document.querySelector(
-                    ".song-btn"
+                document.getElementById(
+                    "songButton"
                 );
 
             button.innerHTML =
                 "❤️ Our Song Is Playing...";
 
-            button.style.opacity =
-                "0.85";
-
         })
-
         .catch(function (error) {
 
             console.log(
-                "Audio Error:",
+                "Song Error:",
                 error
             );
 
             alert(
-                "Song start નથી થયું. ફરી એકવાર button tap કરજે ❤️"
+                "Song play કરવા માટે ફરી button tap કરજે ❤️"
             );
 
         });
-
 }
+
 
 
 /* =================================
@@ -66,12 +62,12 @@ function openLetter() {
     ).style.display = "flex";
 
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo(
+        0,
+        0
+    );
 }
+
 
 
 /* =================================
@@ -90,16 +86,16 @@ function showCards() {
     ).style.display = "block";
 
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo(
+        0,
+        0
+    );
 }
 
 
+
 /* =================================
-   FLIP CARD
+   CARD FLIP
 ================================= */
 
 function flipCard(card) {
@@ -111,8 +107,9 @@ function flipCard(card) {
 }
 
 
+
 /* =================================
-   FINAL SCREEN
+   FINAL
 ================================= */
 
 function showFinal() {
@@ -127,9 +124,8 @@ function showFinal() {
     ).style.display = "flex";
 
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo(
+        0,
+        0
+    );
 }
