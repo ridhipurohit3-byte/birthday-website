@@ -1,163 +1,78 @@
-/* =================================
-   PLAY BIRTHDAY SONG
-================================= */
+let song = null;
 
-function startMusic() {
+function playSong() {
 
-    const song =
-        document.getElementById(
-            "birthdaySong"
+    if (!song) {
+        song = new Audio(
+            "https://ridhipurohit3-byte.github.io/birthday-website/BIRTHDAY.mp3"
         );
 
-    const musicButton =
-        document.getElementById(
-            "musicButton"
-        );
-
-    const letterButton =
-        document.getElementById(
-            "letterButton"
-        );
-
-
-    // Volume
-
-    song.volume = 0.5;
-
-
-    // Play song
+        song.loop = true;
+        song.volume = 0.6;
+    }
 
     song.play()
-        .then(function () {
+        .then(() => {
 
-            console.log(
-                "BIRTHDAY.MP3 is playing ❤️"
-            );
+            const button =
+                document.querySelector(".music-btn");
+
+            button.innerHTML =
+                "❤️ Our Song Is Playing...";
+
+            button.disabled = true;
 
         })
-        .catch(function (error) {
+        .catch((error) => {
 
-            console.log(
-                "Music error:",
-                error
+            console.log(error);
+
+            alert(
+                "Song start નથી થયું. Browserમાં આ website માટે sound allow કરવું પડશે."
             );
 
         });
-
-
-    // Hide music button
-
-    musicButton.style.display =
-        "none";
-
-
-    // Show letter button
-
-    letterButton.style.display =
-        "inline-block";
-
 }
 
-
-
-/* =================================
-   OPEN LETTER
-================================= */
 
 function openLetter() {
 
-    document.getElementById(
-        "openingScreen"
-    ).style.display =
+    document.getElementById("home").style.display =
         "none";
 
-
-    document.getElementById(
-        "letterScreen"
-    ).style.display =
+    document.getElementById("letterSection").style.display =
         "flex";
 
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
+    window.scrollTo(0, 0);
 }
 
-
-
-/* =================================
-   SHOW CARDS
-================================= */
 
 function showCards() {
 
-    document.getElementById(
-        "letterScreen"
-    ).style.display =
+    document.getElementById("letterSection").style.display =
         "none";
 
-
-    document.getElementById(
-        "cardsSection"
-    ).style.display =
+    document.getElementById("cardsSection").style.display =
         "block";
 
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
+    window.scrollTo(0, 0);
 }
 
-
-
-/* =================================
-   FLIP CARD
-================================= */
 
 function flipCard(card) {
 
-    card.classList.toggle(
-        "flipped"
-    );
+    card.classList.toggle("flipped");
 
 }
 
 
-
-/* =================================
-   FINAL SCREEN
-================================= */
-
 function showFinal() {
 
-    document.getElementById(
-        "cardsSection"
-    ).style.display =
+    document.getElementById("cardsSection").style.display =
         "none";
 
-
-    document.getElementById(
-        "finalSection"
-    ).style.display =
+    document.getElementById("finalSection").style.display =
         "flex";
 
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
+    window.scrollTo(0, 0);
 }
