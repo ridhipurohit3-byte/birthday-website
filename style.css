@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family:
@@ -23,9 +25,9 @@ body {
 }
 
 
-/* =================================
+/* =========================
    FLOATING HEARTS
-================================= */
+========================= */
 
 .hearts {
     position: fixed;
@@ -36,8 +38,9 @@ body {
 
     overflow: hidden;
 
-    z-index: 10;
+    z-index: 1;
 }
+
 
 .hearts span {
     position: absolute;
@@ -50,8 +53,10 @@ body {
 
     font-size: 22px;
 
-    animation: floatHeart 12s linear infinite;
+    animation:
+        floatHeart 12s linear infinite;
 }
+
 
 .hearts span:nth-child(1) {
     left: 8%;
@@ -94,9 +99,9 @@ body {
 }
 
 
-/* =================================
+/* =========================
    HOME
-================================= */
+========================= */
 
 .home {
     min-height: 100vh;
@@ -122,32 +127,15 @@ body {
         );
 
     position: relative;
+
+    z-index: 5;
 }
 
-.home::before {
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-    height: 280px;
-
-    border-radius: 50%;
-
-    background: rgba(
-        255,
-        70,
-        140,
-        0.08
-    );
-
-    filter: blur(50px);
-}
 
 .home-box {
     position: relative;
 
-    z-index: 2;
+    z-index: 20;
 
     width: 100%;
 
@@ -156,6 +144,7 @@ body {
     animation:
         appear 1.4s ease;
 }
+
 
 .tiny-text {
     color: #ff9cbe;
@@ -167,12 +156,14 @@ body {
     margin-bottom: 25px;
 }
 
+
 .moon {
     width: 75px;
 
     height: 75px;
 
-    margin: 0 auto 25px;
+    margin:
+        0 auto 25px;
 
     border-radius: 50%;
 
@@ -186,7 +177,8 @@ body {
 
     color: #ffbad3;
 
-    border: 1px solid
+    border:
+        1px solid
         rgba(
             255,
             170,
@@ -204,34 +196,29 @@ body {
         );
 }
 
+
 .home h1 {
     font-family: Georgia, serif;
 
-    font-size: clamp(
-        48px,
-        13vw,
-        85px
-    );
+    font-size:
+        clamp(
+            48px,
+            13vw,
+            85px
+        );
 
     line-height: 0.95;
 
     letter-spacing: -2px;
 
     margin-bottom: 25px;
-
-    text-shadow:
-        0 0 30px
-        rgba(
-            255,
-            60,
-            140,
-            0.45
-        );
 }
+
 
 .home h1 span {
     color: #ff8eb9;
 }
+
 
 .home-text {
     color: #f5d8e3;
@@ -243,6 +230,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 .tap-text {
     color: #b994a3;
 
@@ -252,11 +240,15 @@ body {
 }
 
 
-/* =================================
+/* =========================
    BUTTONS
-================================= */
+========================= */
 
 button {
+    position: relative;
+
+    z-index: 50;
+
     border: none;
 
     cursor: pointer;
@@ -268,14 +260,20 @@ button {
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
+
+    -webkit-tap-highlight-color:
+        transparent;
 }
+
 
 button:active {
     transform: scale(0.95);
 }
 
+
 .song-btn {
-    padding: 15px 28px;
+    padding:
+        15px 28px;
 
     border-radius: 50px;
 
@@ -298,35 +296,17 @@ button:active {
         );
 }
 
-.song-btn:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 35px
-        rgba(
-            255,
-            50,
-            130,
-            0.45
-        );
-}
-
-.song-note {
-    color: #947381;
-
-    font-size: 11px;
-
-    margin: 10px 0 25px;
-}
 
 .open-btn {
-    padding: 14px 27px;
+    padding:
+        14px 27px;
 
     border-radius: 50px;
 
     background: transparent;
 
-    border: 1px solid
+    border:
+        1px solid
         rgba(
             255,
             160,
@@ -339,27 +319,23 @@ button:active {
     color: #ffc5d9;
 }
 
-.open-btn:hover {
-    background:
-        rgba(
-            255,
-            70,
-            140,
-            0.12
-        );
 
-    transform: translateY(-3px);
+.song-note {
+    color: #947381;
+
+    font-size: 11px;
+
+    margin:
+        10px 0 25px;
 }
 
 
-/* =================================
-   LETTER
-================================= */
+/* =========================
+   HIDDEN SECTIONS
+========================= */
 
 .letter-section {
     min-height: 100vh;
-
-    min-height: 100svh;
 
     display: none;
 
@@ -367,7 +343,8 @@ button:active {
 
     align-items: center;
 
-    padding: 40px 16px;
+    padding:
+        40px 16px;
 
     background:
         radial-gradient(
@@ -375,7 +352,66 @@ button:active {
             #500026,
             #16000d 65%
         );
+
+    position: relative;
+
+    z-index: 5;
 }
+
+
+.cards-section {
+    min-height: 100vh;
+
+    display: none;
+
+    padding:
+        70px 18px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #5c002d,
+            #130008 70%
+        );
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.final-section {
+    min-height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        50px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #700038,
+            #17000d 70%
+        );
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   LETTER
+========================= */
 
 .paper {
     position: relative;
@@ -384,7 +420,8 @@ button:active {
 
     max-width: 700px;
 
-    padding: 35px 28px 30px;
+    padding:
+        35px 28px 30px;
 
     background:
         linear-gradient(
@@ -409,33 +446,12 @@ button:active {
     line-height: 1.9;
 
     animation:
-        paperOpen 1s ease;
+        paperOpen 0.8s ease;
 }
 
-.paper::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 8px;
-
-    border: 1px solid
-        rgba(
-            160,
-            50,
-            90,
-            0.15
-        );
-
-    pointer-events: none;
-}
 
 .paper-top {
     color: #a65a76;
-
-    font-family:
-        Georgia,
-        serif;
 
     font-size: 12px;
 
@@ -443,6 +459,7 @@ button:active {
 
     margin-bottom: 25px;
 }
+
 
 .stamp {
     position: absolute;
@@ -463,8 +480,8 @@ button:active {
 
     align-items: center;
 
-    border: 1px solid
-        #d98aa5;
+    border:
+        1px solid #d98aa5;
 
     color: #d94b7c;
 
@@ -472,6 +489,7 @@ button:active {
 
     font-size: 20px;
 }
+
 
 .paper h2 {
     font-family: Georgia, serif;
@@ -485,6 +503,7 @@ button:active {
     margin-bottom: 15px;
 }
 
+
 .line {
     width: 60px;
 
@@ -495,35 +514,39 @@ button:active {
     margin-bottom: 25px;
 }
 
+
 .paper p {
     font-size: 16px;
 
     margin-bottom: 20px;
 }
 
+
 .paper b {
     color: #a52356;
 }
+
 
 .special-line {
     text-align: center;
 
     color: #b32d5d;
 
-    font-family: Georgia, serif;
-
     font-size: 19px !important;
 
     margin-top: 28px;
 }
+
 
 .signature {
     text-align: right;
 
     color: #8b5267;
 
-    margin: 30px 0;
+    margin:
+        30px 0;
 }
+
 
 .signature span {
     color: #b52b5c;
@@ -533,12 +556,15 @@ button:active {
     font-size: 20px;
 }
 
+
 .next-btn {
     display: block;
 
-    margin: 10px auto 0;
+    margin:
+        10px auto 0;
 
-    padding: 13px 22px;
+    padding:
+        13px 22px;
 
     border-radius: 30px;
 
@@ -547,44 +573,20 @@ button:active {
     color: white;
 
     font-size: 14px;
-
-    box-shadow:
-        0 8px 20px
-        rgba(
-            150,
-            20,
-            70,
-            0.25
-        );
 }
 
 
-/* =================================
+/* =========================
    CARDS
-================================= */
-
-.cards-section {
-    min-height: 100vh;
-
-    display: none;
-
-    padding: 70px 18px;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at top,
-            #5c002d,
-            #130008 70%
-        );
-}
+========================= */
 
 .section-heading {
     max-width: 700px;
 
-    margin: 0 auto 45px;
+    margin:
+        0 auto 45px;
 }
+
 
 .section-heading p {
     color: #ff8fb7;
@@ -596,25 +598,29 @@ button:active {
     margin-bottom: 12px;
 }
 
+
 .section-heading h2 {
     font-family: Georgia, serif;
 
-    font-size: clamp(
-        29px,
-        7vw,
-        48px
-    );
+    font-size:
+        clamp(
+            29px,
+            7vw,
+            48px
+        );
 
     line-height: 1.25;
 
     margin-bottom: 12px;
 }
 
+
 .section-heading span {
     color: #aa8795;
 
     font-size: 13px;
 }
+
 
 .cards {
     width: 100%;
@@ -634,44 +640,62 @@ button:active {
     gap: 18px;
 }
 
+
 .card {
     height: 245px;
 
+    width: 100%;
+
     perspective: 1000px;
 
+    -webkit-perspective: 1000px;
+
     cursor: pointer;
+
+    touch-action: manipulation;
+
+    position: relative;
+
+    z-index: 20;
 }
 
+
 .card-inner {
+    position: relative;
+
     width: 100%;
 
     height: 100%;
 
-    position: relative;
+    transition:
+        transform 0.7s ease;
 
     transform-style:
         preserve-3d;
 
-    transition:
-        transform 0.7s
-        cubic-bezier(
-            0.2,
-            0.7,
-            0.3,
-            1
-        );
+    -webkit-transform-style:
+        preserve-3d;
 }
+
 
 .card.flipped .card-inner {
     transform:
         rotateY(180deg);
+
+    -webkit-transform:
+        rotateY(180deg);
 }
+
 
 .front,
 .back {
     position: absolute;
 
-    inset: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
 
     padding: 22px;
 
@@ -687,10 +711,13 @@ button:active {
 
     text-align: center;
 
-    backface-visibility: hidden;
+    backface-visibility:
+        hidden;
 
-    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility:
+        hidden;
 }
+
 
 .front {
     background:
@@ -700,94 +727,89 @@ button:active {
                 255,
                 100,
                 160,
-                0.14
+                0.18
             ),
             rgba(
-                100,
+                80,
                 0,
-                50,
-                0.35
+                40,
+                0.5
             )
         );
 
-    border: 1px solid
+    border:
+        1px solid
         rgba(
             255,
-            150,
-            190,
-            0.18
-        );
-
-    box-shadow:
-        inset 0 0 30px
-        rgba(
-            255,
-            80,
-            140,
-            0.04
+            160,
+            200,
+            0.25
         );
 }
 
+
+.back {
+    background:
+        linear-gradient(
+            145deg,
+            #b51d5b,
+            #58002d
+        );
+
+    transform:
+        rotateY(180deg);
+
+    -webkit-transform:
+        rotateY(180deg);
+}
+
+
 .card-icon {
-    font-size: 42px;
+    font-size: 45px;
 
     margin-bottom: 15px;
 }
 
-.front h3 {
-    color: #ffd0df;
 
-    font-size: 18px;
+.front h3 {
+    color: #ffd5e3;
+
+    font-size: 19px;
 
     margin-bottom: 10px;
 }
 
+
 .front small {
-    color: #9f7c8a;
+    color: #b998a5;
 
     font-size: 11px;
 
     letter-spacing: 1px;
 }
 
-.back {
-    transform:
-        rotateY(180deg);
-
-    background:
-        linear-gradient(
-            145deg,
-            #a81755,
-            #57002b
-        );
-
-    border: 1px solid
-        rgba(
-            255,
-            190,
-            210,
-            0.2
-        );
-}
 
 .back-heart {
-    font-size: 30px;
+    font-size: 32px;
 
     margin-bottom: 15px;
 }
 
+
 .back p {
+    color: #ffe9f0;
+
     font-size: 15px;
 
     line-height: 1.8;
-
-    color: #ffe5ee;
 }
+
 
 .final-btn {
     margin-top: 45px;
 
-    padding: 15px 26px;
+    padding:
+        15px 26px;
 
     border-radius: 40px;
 
@@ -799,44 +821,12 @@ button:active {
         );
 
     font-size: 15px;
-
-    box-shadow:
-        0 10px 30px
-        rgba(
-            200,
-            30,
-            90,
-            0.3
-        );
 }
 
 
-/* =================================
+/* =========================
    FINAL
-================================= */
-
-.final-section {
-    min-height: 100vh;
-
-    min-height: 100svh;
-
-    display: none;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 50px 20px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #700038,
-            #17000d 70%
-        );
-}
+========================= */
 
 .final-box {
     width: 100%;
@@ -847,6 +837,7 @@ button:active {
         finalAppear 1.2s ease;
 }
 
+
 .final-heart {
     font-size: 65px;
 
@@ -855,6 +846,7 @@ button:active {
     animation:
         heartbeat 1.5s infinite;
 }
+
 
 .final-small {
     color: #c995a8;
@@ -866,6 +858,7 @@ button:active {
     margin-bottom: 15px;
 }
 
+
 .final-box h2 {
     color: #ffb1cc;
 
@@ -875,6 +868,7 @@ button:active {
 
     margin-bottom: 25px;
 }
+
 
 .final-box > p {
     color: #efd8e1;
@@ -886,6 +880,7 @@ button:active {
     margin: 18px 0;
 }
 
+
 .divider {
     color: #e86b98;
 
@@ -896,30 +891,25 @@ button:active {
     margin: 30px 0;
 }
 
+
 .final-box h1 {
     font-family: Georgia, serif;
 
-    font-size: clamp(
-        45px,
-        12vw,
-        75px
-    );
+    font-size:
+        clamp(
+            45px,
+            12vw,
+            75px
+        );
 
     line-height: 0.95;
 
     color: #ff8eb8;
 
-    text-shadow:
-        0 0 30px
-        rgba(
-            255,
-            50,
-            130,
-            0.4
-        );
-
-    margin: 25px 0 10px;
+    margin:
+        25px 0 10px;
 }
+
 
 .final-box h3 {
     font-family: Georgia, serif;
@@ -931,12 +921,14 @@ button:active {
     margin-bottom: 30px;
 }
 
+
 .last-message {
     max-width: 500px;
 
     margin:
         0 auto 30px !important;
 }
+
 
 .forever {
     color: #a98291;
@@ -946,6 +938,7 @@ button:active {
     margin-top: 30px;
 }
 
+
 .forever span {
     color: #ff9fc0;
 
@@ -954,20 +947,19 @@ button:active {
     font-size: 22px;
 }
 
+
 .end-hearts {
     color: #e65c8d;
 
     letter-spacing: 10px;
 
     margin-top: 35px;
-
-    opacity: 0.7;
 }
 
 
-/* =================================
+/* =========================
    ANIMATIONS
-================================= */
+========================= */
 
 @keyframes appear {
 
@@ -985,6 +977,7 @@ button:active {
             translateY(0);
     }
 }
+
 
 @keyframes paperOpen {
 
@@ -1005,6 +998,7 @@ button:active {
     }
 }
 
+
 @keyframes finalAppear {
 
     from {
@@ -1021,6 +1015,7 @@ button:active {
             translateY(0);
     }
 }
+
 
 @keyframes heartbeat {
 
@@ -1044,6 +1039,7 @@ button:active {
         transform: scale(1);
     }
 }
+
 
 @keyframes floatHeart {
 
@@ -1073,9 +1069,9 @@ button:active {
 }
 
 
-/* =================================
+/* =========================
    MOBILE
-================================= */
+========================= */
 
 @media (max-width: 600px) {
 
@@ -1084,6 +1080,7 @@ button:active {
             25px 16px;
     }
 
+
     .moon {
         width: 65px;
         height: 65px;
@@ -1091,114 +1088,88 @@ button:active {
         font-size: 34px;
     }
 
+
     .home h1 {
         font-size: 50px;
     }
+
 
     .home-text {
         font-size: 16px;
     }
 
-    .song-btn {
-        padding:
-            14px 24px;
-
-        font-size: 15px;
-    }
 
     .letter-section {
         padding:
             25px 12px;
     }
 
+
     .paper {
         padding:
             30px 20px;
     }
 
+
     .paper h2 {
         font-size: 27px;
     }
 
+
     .paper p {
         font-size: 15.5px;
     }
+
 
     .cards-section {
         padding:
             60px 14px;
     }
 
+
     .cards {
         grid-template-columns:
             1fr;
 
-        gap: 16px;
+        gap: 18px;
     }
+
 
     .card {
         height: 230px;
+
+        min-height: 230px;
     }
 
-    .front h3 {
-        font-size: 19px;
-    }
-
-    .back p {
-        font-size: 15px;
-    }
 
     .final-section {
         padding:
             40px 18px;
     }
 
+
     .final-heart {
         font-size: 55px;
     }
+
 
     .final-box h2 {
         font-size: 32px;
     }
 
+
     .final-box h1 {
         font-size: 50px;
     }
+
 
     .final-box h3 {
         font-size: 22px;
     }
 
+
     .final-box > p {
         font-size: 15.5px;
-    }
-
-}
-
-
-/* EXTRA SMALL PHONES */
-
-@media (max-width: 370px) {
-
-    .home h1 {
-        font-size: 43px;
-    }
-
-    .paper {
-        padding:
-            25px 17px;
-    }
-
-    .paper p {
-        font-size: 14.5px;
-    }
-
-    .card {
-        height: 220px;
-    }
-
-    .final-box h1 {
-        font-size: 43px;
     }
 
 }
